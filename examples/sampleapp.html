@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Block UI service - AngularJS reusable UI component</title>
+        <meta charset="UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+
+        <script src="../dist/debug/vsblockui-0.0.1.js"></script>
+        <link href="../dist/debug/vsblockui-0.0.1.css" rel="stylesheet" type="text/css"/>
+
+        <script src="sampleapp.js"></script>
+        <link href="sampleapp.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body ng-app="sampleapp">
+        <div ng-controller="samplectrl">
+            <h3>Block UI service - AngularJS reusable UI component</h3>
+            
+            <p>Click button below to block the UI. It will be enabled automatically after 3 seconds.</p>
+            
+            <hr/>
+
+            <div style="margin-bottom: 1200px">
+                <button class="button-blockui" ng-click="disable()">Block UI</button>
+                <br/>
+            </div>   
+            
+            <hr/>
+
+        </div>
+    </body>    
+
+</html>

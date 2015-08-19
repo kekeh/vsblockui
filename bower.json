@@ -1,0 +1,38 @@
+{
+  "name": "vsblockui",
+  "description": "Block UI service - AngularJS reusable UI component",
+  "version": "0.0.3",
+  "homepage": "http://kekeh.github.io/vsblockui",
+  "license": "MIT",
+  "authors": [
+    "kekeh"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kekeh/vsblockui.git"
+  },
+  "main": [
+    "dist/min/vsblockui-0.0.1.min.css",
+    "dist/min/vsblockui-0.0.1.min.js"
+  ],
+  "keywords": [
+    "AngularJS",
+    "vsblockui",
+    "blockui",
+    "Block UI"
+  ],
+  "ignore": [
+    "**/.*",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "node_modules",
+    "bower_components",
+    "css",
+    "js",
+    "templates",
+    "test"
+  ],
+  "dependencies": {
+    "angular": "1.4.x"
+  }
+}
