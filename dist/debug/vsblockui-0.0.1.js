@@ -5,7 +5,7 @@
 *  Author: kekeh 
 *  Homepage: http://kekeh.github.io/vsblockui 
 *  License: MIT 
-*  Date: 2015-08-19 
+*  Date: 2015-08-20 
 */ 
 angular.module('template-vsblockui-0.0.1.html', []);
 
@@ -22,7 +22,7 @@ angular.module('vsblockui', ["template-vsblockui-0.0.1.html"])
  * @description run adds the vsblockui template to the template cache.
  */
     .run(['$templateCache', function ($templateCache) {
-        $templateCache.put('vsblockui.html', '<div class="blockui"></div><div class="buiBusyIconContainer"><span class="buiBusyIcon"></span><span class="buiBusyIconTxt"></span></div>');
+        $templateCache.put('vsblockui.html', '<div class="vsblockui"></div><div class="buiBusyIconContainer"><span class="buiBusyIcon"></span><span class="buiBusyIconTxt"></span></div>');
     }])
 
 /**

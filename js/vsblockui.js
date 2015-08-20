@@ -10,7 +10,7 @@ angular.module('vsblockui', [])
  * @description run adds the vsblockui template to the template cache.
  */
     .run(['$templateCache', function ($templateCache) {
-        $templateCache.put('vsblockui.html', '<div class="blockui"></div><div class="buiBusyIconContainer"><span class="buiBusyIcon"></span><span class="buiBusyIconTxt"></span></div>');
+        $templateCache.put('vsblockui.html', '<div class="vsblockui"></div><div class="buiBusyIconContainer"><span class="buiBusyIcon"></span><span class="buiBusyIconTxt"></span></div>');
     }])
 
 /**
