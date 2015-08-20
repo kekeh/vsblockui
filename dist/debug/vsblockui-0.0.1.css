@@ -38,6 +38,9 @@
     -moz-animation: animate 0.6s infinite linear;
     -webkit-animation: animate 0.6s infinite linear;
     animation: animate 0.6s infinite linear;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 .buiBusyIconTxt {

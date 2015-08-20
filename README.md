@@ -83,8 +83,9 @@ bower install vsblockui
 ## Compatibility (tested with)
 * Firefox 40
 * Chromium 44.0.2403.89 
-* 
-* 
+* Mobile Safari 8
+* IE 10+
+* Edge
 
 ## License
 * License: MIT
