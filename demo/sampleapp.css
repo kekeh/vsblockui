@@ -1,0 +1,15 @@
+
+.button-blockui {
+    padding: 2px 6px;
+    cursor: pointer;
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: #CFEAC4;
+    color: #2C763E;
+}
+
+.button-blockui:hover {
+    background-color: #78FA89;
+    color: #000;
+}
