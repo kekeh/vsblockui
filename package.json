@@ -1,8 +1,8 @@
 {
   "author": "kekeh",
-  "description": "Block UI service - AngularJS reusable UI component",
+  "description": "Block UI and spinner service - AngularJS reusable UI component",
   "name": "vsblockui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "homepage": "http://kekeh.github.io/vsblockui",
   "dependencies": {
@@ -32,7 +32,8 @@
     "AngularJS",
     "vsblockui",
     "blockui",
-    "Block UI"
+    "Block UI",
+    "spinner"
   ],
   "engine": "node >= 0.10"
 }

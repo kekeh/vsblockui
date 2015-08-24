@@ -1,16 +1,16 @@
-# vsblockui v. 0.0.1
+# vsblockui v. 0.0.2
 
-**Block UI service - AngularJS reusable UI component**
+**Block UI and spinner service - AngularJS reusable UI component**
 
 ## Description
-Simple AngularJS service which implements the block UI functionality. This component uses the CSS3 transforms and the CSS3 animations. This component depends on only the AngularJS.
+Simple AngularJS service which implements the block UI ans spinner functionality. This component uses the CSS3 transforms and the CSS3 animations. This component depends on only the AngularJS.
 
 ## Usage
 
-* include the **vsblockui-0.0.1.min.js** and the **vsblockui-0.0.1.min.css** files into your project. See the **Build project** and the **Installation** chapters below.
+* include the **vsblockui-0.0.2.min.js** and the **vsblockui-0.0.2.min.css** files into your project. See the **Build project** and the **Installation** chapters below.
 ```html
-<script src="vsblockui-0.0.1.min.js"></script>
-<link href="vsblockui-0.0.1.min.css" rel="stylesheet" type="text/css">
+<script src="vsblockui-0.0.2.min.js"></script>
+<link href="vsblockui-0.0.2.min.css" rel="stylesheet" type="text/css">
 ```
 * inject the **vsblockui** module into your application module.
 * and inject the **vsblockui** service into each controller which is using the block UI.

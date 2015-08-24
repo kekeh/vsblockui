@@ -1,13 +1,13 @@
 /* 
 *  Name: vsblockui 
-*  Description: Block UI service - AngularJS reusable UI component 
-*  Version: 0.0.1 
+*  Description: Block UI and spinner service - AngularJS reusable UI component 
+*  Version: 0.0.2 
 *  Author: kekeh 
 *  Homepage: http://kekeh.github.io/vsblockui 
 *  License: MIT 
-*  Date: 2015-08-20 
+*  Date: 2015-08-24 
 */ 
-angular.module('template-vsblockui-0.0.1.html', []);
+angular.module('template-vsblockui-0.0.2.html', []);
 
 
 /**
@@ -15,7 +15,7 @@ angular.module('template-vsblockui-0.0.1.html', []);
  * @name vsblockui
  * @description vsblockui is module of the block UI component.
  */
-angular.module('vsblockui', ["template-vsblockui-0.0.1.html"])
+angular.module('vsblockui', ["template-vsblockui-0.0.2.html"])
 /**
  * @ngdoc object
  * @name run
@@ -32,31 +32,30 @@ angular.module('vsblockui', ["template-vsblockui-0.0.1.html"])
  */
     .factory('vsblockui', ['$rootScope', '$compile', '$document', '$templateCache', '$http', '$interval', function ($rootScope, $compile, $document, $templateCache, $http, $interval) {
         var so = {};
-        var blockElem = 0;
+        var block = 0;
 
         so.disable = function (bui) {
             $http.get('vsblockui.html', {cache: $templateCache}).success(function (resp) {
-                var scope = $rootScope.$new();
-                blockElem = $compile(angular.element(resp))(scope);
-                angular.element(blockElem.children()[1]).text(bui.message);
-                body().append(blockElem);
+                block = $compile(angular.element(resp))($rootScope.$new());
+                angular.element(block.children()[1]).text(bui.message);
+                $document.find('body').append(block);
 
                 if (!angular.isUndefined(bui.disabledTime)) {
                     $interval(function () {
-                        blockElem.remove();
+                        removeBlock();
                     }, bui.disabledTime, 1);
-                }
-
-                function body() {
-                    return $document.find('body');
                 }
             });
         };
 
         so.enable = function () {
-            if (blockElem !== 0) {
-                blockElem.remove();
-                blockElem = 0;
+            removeBlock();
+        }
+
+        function removeBlock() {
+            if (block !== 0) {
+                block.remove();
+                block = 0;
             }
         }
 

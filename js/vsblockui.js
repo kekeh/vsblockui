@@ -20,31 +20,30 @@ angular.module('vsblockui', [])
  */
     .factory('vsblockui', ['$rootScope', '$compile', '$document', '$templateCache', '$http', '$interval', function ($rootScope, $compile, $document, $templateCache, $http, $interval) {
         var so = {};
-        var blockElem = 0;
+        var block = 0;
 
         so.disable = function (bui) {
             $http.get('vsblockui.html', {cache: $templateCache}).success(function (resp) {
-                var scope = $rootScope.$new();
-                blockElem = $compile(angular.element(resp))(scope);
-                angular.element(blockElem.children()[1]).text(bui.message);
-                body().append(blockElem);
+                block = $compile(angular.element(resp))($rootScope.$new());
+                angular.element(block.children()[1]).text(bui.message);
+                $document.find('body').append(block);
 
                 if (!angular.isUndefined(bui.disabledTime)) {
                     $interval(function () {
-                        blockElem.remove();
+                        removeBlock();
                     }, bui.disabledTime, 1);
-                }
-
-                function body() {
-                    return $document.find('body');
                 }
             });
         };
 
         so.enable = function () {
-            if (blockElem !== 0) {
-                blockElem.remove();
-                blockElem = 0;
+            removeBlock();
+        }
+
+        function removeBlock() {
+            if (block !== 0) {
+                block.remove();
+                block = 0;
             }
         }
 
